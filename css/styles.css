@@ -13,9 +13,6 @@
     --dominant-font: 'Roboto', sans-serif;
     --silver-icon: #AFB1B8;
     --border: #eee;
-
-    --tran-dur: 250ms;
-    --tran-t-fun: cubic-bezier(0.4, 0, 0.2, 1);
 }
 html {
     box-sizing: border-box;
@@ -30,7 +27,7 @@ body{
 h1, h2, h3, h4, h5, h6, ul, p{ margin: 0; padding: 0; list-style: none; }
 ul, ol, li{ list-style-type: none; padding-left: 0; }
 img{ display: block; max-width: 100%; height: auto; }
-a, button{ text-decoration: none; border: none; cursor: pointer; font-family: inherit; padding: 0;}
+a, button{ text-decoration: none; border: none; cursor: pointer; font-family: inherit;}
 address { font-style: normal;}
 
 div.container{
@@ -81,8 +78,8 @@ li.navigation-item a{
     text-decoration: none;
 
     transition-property: color;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 li.navigation-item a.studia::after{            /*index border bottom current page */
     position: relative;
@@ -129,8 +126,8 @@ li.contact-item a{
     align-items: center;
 
     transition-property: color;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 li.contact-item {
     display: flex;
@@ -158,8 +155,8 @@ li.address-contact-item a{
     display: block;
 
     transition-property: color;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 li.address-contact-item{
@@ -199,7 +196,6 @@ nav.nav-studio{
 }
 div.footer-container-kiev{
     display: flex;
-    justify-content: space-between;
 }
 svg.contact-icon-let{
     display: inline-block;
@@ -213,8 +209,8 @@ a.icon-link svg.icon{
     fill: var(--silver-icon);
 
     transition-property: background-color, fill;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 a.icon-link{
     display: inline-block;
@@ -260,48 +256,18 @@ li.contact-item a:focus,
 li.contact-item a:focus svg{
   color: var(--color-blue);
   fill: var(--color-blue);
-  outline: none;
   
 }
 a.icon-link:focus{
     background: var(--color-blue);
     fill: var(--white);
-    outline: none;
 }
 a.icon-link:focus svg{
    fill: var(--white);
 }
  address li.address-contact-item a:focus{
     color: var(--color-blue);
-    outline: none;
 }
-.footer-twitter-mail-form{
-    display: inline-flex;
-    position: relative;
-}
-input.footer-twitter-mail-form-background{
-    margin-top: 20px;
-    display: block;
-    padding: 2px 15px;
-    height: 50px;
-    width: 358px;
-    border-radius: 4px;
-    background-color: #2F303A;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    color: rgba(255, 255, 255, 0.3);
-}
-svg.icon-send-footer-button{
-    /* border: 1px solid red; */
-    position: absolute;
-    top: 34px;
-    right: 27px;
-    width: 24px;
-    height: 24px;
-}
-
-                                    /* header and footer */
-
 
 
                                     /* main page */
@@ -333,8 +299,6 @@ section.main-section{
     background-size: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-form button[type="submit"],
-div.footer-twitter-mail-form button[type="submit"],
 div.container-effective-solutions button[type="button"]{                      /*big blue button*/
     font-family: inherit;
     font-size: 16px;
@@ -355,18 +319,14 @@ div.container-effective-solutions button[type="button"]{                      /*
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-div.container-effective-solutions button[type="button"]:hover,
-div.container-effective-solutions button[type="button"]:focus,
-form button[type="submit"]:hover,
-form button[type="submit"]:focus,
-div.footer-twitter-mail-form button[type="submit"]:hover,
-div.footer-twitter-mail-form button[type="submit"]:focus
-{
+div.container-effective-solutions button[type="button"]:hover{
     background-color: var(--button-hover);
-    box-shadow: 0 0 1px 1px var(--button-hover);
-    outline: none;
+    box-shadow: 0 0 2px 2px var(--button-hover);
 }
-
+div.container-effective-solutions button[type="button"]:focus{
+    background-color: var(--button-hover);
+    box-shadow: 0 0 3px 4px var(--button-hover);
+}
 ul.attention-to-details{
     display: flex;
     justify-content: space-between;
@@ -509,19 +469,14 @@ a.regular-customers-link{
     align-items: center;
 
     transition-property: background-color;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 a.regular-customers-link:hover svg {
      fill: var(--color-blue);
 }   
 a.regular-customers-link:focus svg{                /*focus*/
      fill: var(--color-blue);
-     outline: none;
-}
-a.regular-customers-link:focus {
-    border: 1px solid var(--color-blue);
 }
  a.regular-customers-link:hover{
      border: 1px solid var(--color-blue);
@@ -532,8 +487,8 @@ a.regular-customers-link svg{
     height: 60px;
 
     transition-property: border, fill;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 li.attention-to-details-items img[src*="./images/ko"] {
@@ -562,7 +517,6 @@ div.attention-to-block{
 }
 
 
-
                                 /* portfolio */
                                 /* portfolio */
                                 /* portfolio */
@@ -585,8 +539,8 @@ li.main-block-big-foto-items{
     list-style: none;
 
     transition-property: box-shadow;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 li.main-block-big-foto-items:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -660,8 +614,8 @@ li.portfolio-many-buttons-item button{      /*many buttons*/
     background-color: var(--light-silver);
 
     transition-property: background-color, color, box-shadow;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 li.portfolio-many-buttons-item:hover button{
@@ -674,7 +628,6 @@ li.portfolio-many-buttons-item:hover button{
 li.portfolio-many-buttons-item button:focus {
     background-color: var(--color-blue);
     color: var(--white);
-    outline: none;
 }
 h2.title-hidden{
     display: none;
@@ -702,8 +655,8 @@ div.overlay-block{
     transform: translateY(100%);
         /* hover */
     transition-property: transform;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 div.for-overlay:hover div.overlay-block{
     transform: translateY(0%);
@@ -721,26 +674,9 @@ li.main-block-big-foto-items p.overlay-text{
     color: var(--white);
 }
 svg.icon-close{
-    /* border: 1px solid red; */
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    margin: 5px 5px; 
+    margin-left: auto;
     width: 30px;
     height: 30px;
-    background-color: transparent;
-    fill: var(--black);
-    border: 1px solid var(--silver-icon);
-    border-radius: 50%;
-
-    transition-property: fill;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
-   
-}
-svg.icon-close:hover {
-    fill: var(--color-blue);
-    
 }
 
 div.backdrop{                               /* modal window */
@@ -753,20 +689,26 @@ div.backdrop{                               /* modal window */
     height: 100%;
 
     transition:
-    opacity 250ms var(--tran-t-fun), 
-    visibility 250ms var(--tran-t-fun);
+     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-start;
+
     position: absolute;
-    padding: 30px 40px;
     top: 50%;
     left: 50%;
     width: 528px;
-    min-height: 581px;
+    height: 581px;
     border-radius: 4px;
+
     transform: translate(-50%, -50%);
-    background-color: var(--white);
+   
+    background-color: var(--white) ;
     box-shadow:
      0px 1px 3px rgba(0, 0, 0, 0.12),
      0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -776,152 +718,4 @@ div.backdrop.is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-}
-
-h2.modal-title{
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: var(--black);
-
-}
-label.form-field-label{
-    display: block;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-
-    color: var(--contact-gray);
-}
-input.form-field-input{
-    display: block;
-    padding: 2px 31px;
-    height: 40px;
-    width: 100%;
-    margin: 4px 0 0;
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-
-    transition-property: border;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
-}
-
-textarea.form-field-comment:hover,
-textarea.form-field-comment:focus,
-div.form-block input.form-field-input:hover,
-div.form-block input.form-field-input:focus{
-    border: 1px solid var(--color-blue);
-    outline: none;
-}
-svg.icon-man:hover{
-    fill: var(--color-blue);
-}
-
-svg.icon-man{
-    position: absolute;
-    top: 31px;
-    left: 12px;
-    width: 18px;
-    height: 18px;
-    fill: var(--black);
-    /* border: 1px solid red; */
-
-    transition-property: fill;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
-}
-input.form-field-input:focus~.icon-man,
-div.form-block svg.icon-man:hover{
-    fill: var(--color-blue);
-    outline: none;
-}
-
-div.form-block{
-    position: relative;
-    margin-top: 12px;
-}
-textarea.form-field-comment{
-    display: block;
-    min-height: 120px;
-    width: 100%;
-    margin: 4px 0 20px;
-    font-family: 'Roboto';
-    padding: 10px 12px;
-    resize: none;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-
-    transition-property: border;
-    transition-duration: var(--tran-dur);
-    transition-timing-function: var(--tran-t-fun);
-}
-
-
-form button[type="submit"]{             /* button in modal*/
-    margin: 30px auto 0;
-    width: 200px;
-}
-
-div.footer-twitter-mail-form button[type="submit"] {
-    width: 200px;
-    height: 50px;
-    margin: 20px 0 0 12px;
-    text-indent: -30px;
-}
-
-input.checkbox-input{
-    appearance: none;
-}
-div.checkbox-control{
-    position: relative;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--black);
-    flex-shrink: 0;
-    margin: 5px 8px 0 14px;
-    cursor: pointer;
-}
-.checkbox-flex{
-    display: flex;
-    margin-top: 20px;
-}
-svg.icon-check{
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: 16px;
-    height: 15px;
-    opacity: 0;
-}
-
-input.checkbox-input:checked + .icon-check{
-    opacity: 1;
-}
-label.label-link{
-position: absolute;
-top: 0;
-right: 5px;
-
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;   
-color: var(--silver-gray);   
-padding-left: 32px;
-}
-
-label.form-field-label a[href="#m"]{
-    color: var(--color-blue);
-    text-decoration: underline;
 }
