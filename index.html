@@ -25,7 +25,7 @@
         <a class="main-logo" href="./index.html"><span>Web</span>Studio</a>
         <nav class="nav-studio">
             <ul class="navigation">
-                <li class="navigation-item"><a href="index.html">Студия</a></li>
+                <li class="navigation-item"><a href="index.html" class="studia">Студия</a></li>
                 <li class="navigation-item"><a href="./portfolio.html">Портфолио</a></li>
                 <li class="navigation-item"><a href="#">Контакты</a></li>
             </ul>
@@ -59,7 +59,7 @@
             <div class="container container-effective-solutions">
 <h1 class="main-title">Эффективные решения<br>для вашего бизнеса</h1>
 
-            <button type="button">Заказать услугу</button>
+            <button type="button" data-modal-open>Заказать услугу</button>              <!-- button -->
             </div>
         </section>
       
@@ -114,9 +114,34 @@
             <div class="container container-what-we-do">
 <h2 class="what-we-do-title">Чем мы занимаемся</h2>
             <ul class="what-we-do">
-                <li><img src="./images/ha1.jpg" width="370" alt="Лептоп и айфон"></li>
-                <li><img src="./images/ha2.jpg" width="370" alt="Руки на клавиатуре"></li>
-                <li><img src="./images/ha3.jpg" width="370" alt="Цветовая модель"></li>
+                <li>
+                    <div class="what-we-do-block">
+                        <img src="./images/ha1.jpg" width="370" alt="Лептоп и айфон">
+                        <div class="what-we-do-desktop">
+                            <p>Десктопные приложения</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="what-we-do-block">
+                        <img src="./images/ha2.jpg" width="370" alt="Лептоп и айфон">
+                        <div class="what-we-do-desktop">
+                            <p>Мобильные приложения</p>
+                        </div>
+                    </div>
+                
+                </li>
+
+                <li>
+                    <div class="what-we-do-block">
+                        <img src="./images/ha3.jpg" width="370" alt="Лептоп и айфон">
+                        <div class="what-we-do-desktop">
+                            <p>Дизайнерские решения</p>
+                        </div>
+                    </div>
+                </li>
+
             </ul>
             </div>
             <!-- container -->
@@ -353,7 +378,6 @@
                                 </svg>
                             </a>
                         </li>
-
                 </ul>
 
             </div>
@@ -413,15 +437,110 @@
             </ul>
         
         </div>
-       
+
+        <div class="footer-twitter">
+            <h4>Подпишитесь на рассылку</h4>
+            
+            <form>
+
+    <div class="footer-twitter-mail-form">
+        <label class="form-field-label" for="user-mail-web"></label>
+        <input class="footer-twitter-mail-form-background" id="user-mail-web" type="email" name="user-mail" placeholder="E-mail">
+            
+            
+        <button type="submit">Подписаться</button>
+
+        <svg class="icon-send-footer-button" aria-hidden="true" width="32" height="32">
+            <use href="./images/icons.svg#icon-icon-send"></use>
+        </svg>
 
     </div>
 
+            </form>
     
-    
-    <!-- container in footer-->
+        </div>
+       
+    </div>
+            <!-- container in footer-->
+
 </footer>
 
 
+
+
+
+
+                                                                <!-- modal window -->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+       
+        <button type="button" data-modal-close>
+            <svg class="icon-close" aria-hidden="true" width="32" height="32">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+
+<form>
+    <div class="form-block">
+        <label class="form-field-label" for="user-name">Имя</label>
+        
+            <input class="form-field-input" id="user-name" type="text" name="user-name" >
+
+            <svg class="icon-man" aria-hidden="true" >
+                <use href="./images/icons.svg#men" width="13" height="13"></use>
+            </svg>
+        
+    </div>
+
+    <div class="form-block">
+        <label class="form-field-label" for="user-phone">Телефон</label>
+        <input class="form-field-input" id="user-phone" type="tel" name="user-phone" >
+    
+        <svg class="icon-man" aria-hidden="true">
+            <use href="./images/icons.svg#icon-phone-b" width="20" height="20"></use>
+        </svg>
+    </div>
+
+    <div class="form-block">
+        <label class="form-field-label" for="user-mail">Почта</label>
+        <input class="form-field-input" id="user-mail" type="email" name="user-mail" >
+    
+        <svg class="icon-man" aria-hidden="true" >
+            <use href="./images/icons.svg#icon-email-b" width="22" height="18"></use>
+        </svg>
+    </div>
+
+    <div class="form-block">
+        <label class="form-field-label" for="user-comment">Комментарий</label>
+        <textarea class="form-field-comment" id="user-comment" name="user-comment"
+         placeholder="Введите текст"></textarea>
+    </div>
+
+    <div class="form-block checkbox-flex">
+        <div class="checkbox-control">
+            <input class="checkbox-input checkbox-hidden" id="checkbox-input" type="checkbox" name="checkbox-input" required>
+
+            <svg class="icon-check" aria-hidden="true" width="32" height="32">
+                <use href="./images/icons.svg#check"></use>
+            </svg>
+        </div>
+        
+        <label class="form-field-label label-link" for="checkbox-input">Соглашаюсь с рассылкой и принимаю
+            <a href="#m">Условия договора</a>
+        </label>
+        
+    </div>
+
+
+    <button type="submit">Отправить</button>
+</form>
+
+    </div>
+
+
+</div>
+                                                        <!--  this is script -->
+<script src="./js/modal.js"></script>              
  </body>
 </html>
