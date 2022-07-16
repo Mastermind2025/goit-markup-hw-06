@@ -973,10 +973,6 @@ div.form-block input.form-field-input:focus {
     outline: none;
 }
 
-svg.icon-man:hover {
-    fill: var(--color-blue);
-}
-
 svg.icon-man {
     position: absolute;
     top: 31px;
@@ -990,7 +986,7 @@ svg.icon-man {
     transition-duration: var(--tran-dur);
     transition-timing-function: var(--tran-t-fun);
 }
-
+input.form-field-input:hover~.icon-man,
 input.form-field-input:focus~.icon-man,
 div.form-block svg.icon-man:hover {
     fill: var(--color-blue);
