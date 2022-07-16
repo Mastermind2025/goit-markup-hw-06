@@ -881,10 +881,17 @@ svg.icon-close {
     transition-duration: var(--tran-dur);
     transition-timing-function: var(--tran-t-fun);
 }
-
 svg.icon-close:hover {
     fill: var(--color-blue);
 
+}
+div.modal button.button-close-in-corner {
+    transition-duration: var(--tran-dur);
+    transition-timing-function: var(--tran-t-fun);
+}
+
+div.modal button.button-close-in-corner:focus svg {
+    fill: var(--color-blue);
 }
 
 div.backdrop {
@@ -1083,4 +1090,17 @@ label.label-link {
 label.form-field-label a[href="#m"] {
     color: var(--color-blue);
     text-decoration: underline;
+
+    transition-property: border;
+    transition-duration: var(--tran-dur);
+    transition-timing-function: var(--tran-t-fun);
 }
+label.form-field-label a[href="#m"]:focus {
+    color: var(--button-hover);
+
+    box-shadow:
+            0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
