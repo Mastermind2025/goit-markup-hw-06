@@ -1003,18 +1003,23 @@ textarea.form-field-comment {
     min-height: 120px;
     width: 100%;
     margin: 4px 0 20px;
-    font-family: 'Roboto';
     padding: 10px 12px;
     resize: none;
-    font-size: 12px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
     transition-property: border;
     transition-duration: var(--tran-dur);
     transition-timing-function: var(--tran-t-fun);
+}
+textarea.form-field-comment::placeholder {
+    
+    font-family: 'Roboto';
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    
+    color: rgba(117, 117, 117, 0.5);
 }
 
 
