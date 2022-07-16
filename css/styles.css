@@ -1085,6 +1085,7 @@ label.label-link {
     letter-spacing: 0.03em;
     color: var(--silver-gray);
     padding-left: 32px;
+    cursor: pointer;
 }
 
 label.form-field-label a[href="#m"] {
@@ -1095,6 +1096,7 @@ label.form-field-label a[href="#m"] {
     transition-duration: var(--tran-dur);
     transition-timing-function: var(--tran-t-fun);
 }
+label.form-field-label a[href="#m"]:hover,
 label.form-field-label a[href="#m"]:focus {
     color: var(--button-hover);
 
@@ -1103,4 +1105,6 @@ label.form-field-label a[href="#m"]:focus {
             0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+
 
